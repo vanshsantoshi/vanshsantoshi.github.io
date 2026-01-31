@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vansh Kumar Santoshi | Android Security & Reverse Engineering</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    a { color: #38bdf8; text-decoration: none; }
+    header {
+      padding: 90px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #020617, #0f172a);
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; color: #94a3b8; max-width: 700px; margin: auto; }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 26px;
+      border-radius: 6px;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 10px;
+    }
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .project {
+      background: #020617;
+      padding: 22px;
+      margin-bottom: 22px;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+    }
+    .project h3 { margin-top: 0; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>Vansh Kumar Santoshi</h1>
+    <p>
+      Android Security • Reverse Engineering • Malware Analysis<br />
+      Linux Power User | Open‑Source Contributor
+    </p>
+    <a class="btn" href="mailto:vanshsantoshi3345@gmail.com">Contact Me</a>
+    <div style="display:inline-block; position: relative;">
+      <a class="btn" href="#" onclick="toggleResumeMenu(event)">Download Resume ▼</a>
+      <div id="resume-menu" style="display:none; position:absolute; left:50%; transform:translateX(-50%); margin-top:10px; background:#020617; border:1px solid #1e293b; border-radius:8px; min-width:220px; z-index:100;">
+        <a href="resume-android-security.pdf" style="display:block; padding:12px 16px;">Android Security Resume</a>
+        <a href="resume-reverse-engineering.pdf" style="display:block; padding:12px 16px;">Reverse Engineering Resume</a>
+        <a href="resume-android-dev.pdf" style="display:block; padding:12px 16px;">Android Developer Resume</a>
+        <a href="resume-general.pdf" style="display:block; padding:12px 16px;">General Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am an Android security researcher with a strong focus on reverse engineering,
+      malware analysis, and application security testing. I enjoy working close to
+      system internals—breaking apps apart, understanding how they work, and
+      rebuilding them with modified or malicious behaviors for research purposes.
+    </p>
+    <p>
+      My interests include Android runtime internals, Smali-level modifications,
+      bypassing protections, and analyzing native libraries (.so). I also have
+      professional experience fixing production Android and Flutter applications.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills & Tooling</h2>
+    <div class="skills">
+      <span>Android Security Testing</span>
+      <span>Reverse Engineering</span>
+      <span>Static & Dynamic Analysis</span>
+      <span>Android Malware Analysis</span>
+      <span>Frida</span>
+      <span>Xposed</span>
+      <span>APKTool</span>
+      <span>JEB</span>
+      <span>Jadx</span>
+      <span>IDA</span>
+      <span>Ghidra</span>
+      <span>Burp Suite</span>
+      <span>MITMProxy</span>
+      <span>PCAPDroid</span>
+      <span>Linux (Debian / Ubuntu)</span>
+      <span>Windows CLI</span>
+      <span>C</span>
+      <span>C++</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>Smali</span>
+      <span>Assembly (Basic)</span>
+      <span>Selenium Automation</span>
+      <span>Android Development (Basic)</span>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE -->
+  <section id="opensource">
+    <h2>Open Source Contributions</h2>
+
+    <div class="project">
+      <h3>Smali / Baksmali (Google)</h3>
+      <p>
+        Fixed a critical bug that broke deodexing and disassembling of ODEX files
+        on Android 12+ due to ART changes. Updated baksmali logic to correctly
+        locate DEX headers in modern odex/vdex files and restored compatibility.
+        Also updated project documentation.
+      </p>
+      <a href="https://github.com/google/smali/pull/87">View Pull Request</a>
+    </div>
+
+    <div class="project">
+      <h3>YeetMeet (Python Selenium Project)</h3>
+      <p>
+        Contributed during high school to a 150+ star Selenium automation project.
+        Fixed major bugs, added new features, and created step‑by‑step deployment
+        tutorials (video + written) for the community.
+      </p>
+      <a href="https://github.com/1337w0rm/YeetMeet/pull/47">PR #47</a> | 
+      <a href="https://github.com/1337w0rm/YeetMeet/pull/49">PR #49</a>
+    </div>
+  </section>
+
+  <!-- SECURITY PROJECTS -->
+  <section id="projects">
+    <h2>Android Security & Malware Projects</h2>
+
+    <div class="project">
+      <h3>Android Keylogger & Spyware Variants</h3>
+      <p>
+        Designed multiple Android malware variants exploiting Accessibility
+        Services to capture keystrokes, screen text, notifications, and messages
+        across apps including WhatsApp. Later variants included screenshot
+        capture, full‑file access, Play Protect bypass, and permission escalation
+        via overlay‑based UI deception.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Smali‑Level Malware Injection</h3>
+      <p>
+        Specialized in injecting malicious functionality directly into closed‑source
+        Android apps using Smali. Added permissions, dialogs, and logic without
+        access to source code. Demonstrated by injecting malware into popular apps
+        such as FlashVPN and VLC. Created public video and written guides.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Custom Malicious Android Keyboard</h3>
+      <p>
+        Built a malicious Android keyboard capable of automating screen actions
+        using special input keys. Created before fully understanding the
+        Accessibility API. Private repository.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>
+      <strong>Allywired Software Solutions — Service Engineer (Level 2)</strong><br />
+      Worked on production Flutter and Android applications. Fixed UI and logic
+      issues, resolved runtime crashes, modified widgets and navigation flows,
+      and applied bug fixes in Java/Kotlin codebases. Tested on emulators and
+      real devices.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <p>
+      <strong>KIIT University, Bhubaneswar</strong><br />
+      B.Tech — Computer Science & Electronics Engineering (2021–2025)
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: vanshsantoshi3345@gmail.com</p>
+    <p>
+      <a href="https://github.com/vanshsantoshi">GitHub</a> | 
+      <a href="https://linkedin.com/in/vansh-santoshi">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Vansh Kumar Santoshi. All rights reserved.
+  </footer>
+
+<script>
+  function toggleResumeMenu(e) {
+    e.preventDefault();
+    const menu = document.getElementById('resume-menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function (e) {
+    const menu = document.getElementById('resume-menu');
+    if (!e.target.closest('#resume-menu') && !e.target.closest('.btn')) {
+      menu.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
